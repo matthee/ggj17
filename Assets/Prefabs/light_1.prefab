@@ -52,8 +52,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4353217572711110}
-  - component: {fileID: 65655396705932348}
   - component: {fileID: 54904347542078564}
+  - component: {fileID: 64209984478611740}
   m_Layer: 0
   m_Name: light_1
   m_TagString: Untagged
@@ -155,18 +155,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65655396705932348
-BoxCollider:
+--- !u!64 &64209984478611740
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846828182107064}
-  m_Material: {fileID: 13400000, guid: 98b014b6638df4a2b9f4f76d421d1ed5, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 155.71735, y: 370.5731, z: 259.53842}
-  m_Center: {x: -55.136143, y: -38.819954, z: 29.769234}
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 81d32604085b04437b2b763fff1b8fa9, type: 3}
 --- !u!108 &108949251100106008
 Light:
   m_ObjectHideFlags: 1

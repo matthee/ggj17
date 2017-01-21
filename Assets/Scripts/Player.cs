@@ -19,6 +19,7 @@ public class Player : MonoBehaviour {
 
   public void Reset () {
     m_Alive = true;
+    GetComponent<Rigidbody> ().velocity = Vector3.zero;
   }
 
   void OnCollisionStay(Collision coll) {

@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4305949037396056}
+  - component: {fileID: 64409438826651674}
   m_Layer: 0
   m_Name: coffin_1
   m_TagString: Untagged
@@ -63,8 +64,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1404276288391598}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.003537449, y: 0.003537451, z: 0.003537451}
   m_Children:
   - {fileID: 4040636372115310}
   m_Father: {fileID: 0}
@@ -107,4 +108,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1054853294667442}
+  m_Mesh: {fileID: 4300000, guid: 39e0f947b26cb4785a7ba65066dcb9f3, type: 3}
+--- !u!64 &64409438826651674
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1404276288391598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 1
+  m_SkinWidth: 1.00000005e-20
   m_Mesh: {fileID: 4300000, guid: 39e0f947b26cb4785a7ba65066dcb9f3, type: 3}
