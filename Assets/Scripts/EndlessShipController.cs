@@ -12,11 +12,11 @@ public class EndlessShipController : MonoBehaviour {
   public float generateBack;
 
   private float generatedLength;
-  private LinkedList<GameObject> sections;
+  private LinkedList<GameObject> sections = new LinkedList<GameObject> ();
 
 	// Use this for initialization
 	void Start () {
-    Reset()
+
 	}
 
   public void Reset () {

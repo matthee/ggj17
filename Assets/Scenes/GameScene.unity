@@ -256,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310069244}
   - component: {fileID: 310069243}
+  - component: {fileID: 310069245}
   m_Layer: 0
   m_Name: __SCRIPT__
   m_TagString: Untagged
@@ -289,6 +290,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &310069245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310069242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9795ce3ece04051b1b5d50f6d7b93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EndlessShipController: {fileID: 725229777}
+  m_Player: {fileID: 590352370}
+  m_SpawnPoints:
+  - {fileID: 1023033793}
 --- !u!1 &527159934
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c807d3c32999049b18a706bb578a9725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AutoRun: 1
 --- !u!114 &590352376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +392,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e10fcf1236d1246f38f3170b957cc5da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &590352377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 590352370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0873e608836ca47bcb6fd9b25af2e95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &725229777

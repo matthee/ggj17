@@ -55,6 +55,7 @@
      <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
      <Compile Include="Assets\Scripts\CollisionManager.cs" />
      <Compile Include="Assets\Scripts\EndlessShipController.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerControl.cs" />
      <Compile Include="Assets\Scripts\ScoreController.cs" />

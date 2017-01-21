@@ -5,17 +5,17 @@ using UnityEngine;
 public class Player : MonoBehaviour {
   private CollisionManager m_CollisionManager;
    
-  private bool alive = true;
+  private bool m_Alive;
 
 	// Use this for initialization
 	void Start () {
     m_CollisionManager = GetComponent<CollisionManager> ();
+    Reset ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+  public void Reset () {
+    m_Alive = true;
+  }
 
   void OnCollisionStay(Collision coll) {
     // first, see if the player is touching anything else.
@@ -38,14 +38,13 @@ public class Player : MonoBehaviour {
   }
 
   private void Die () {
-    alive = false;
-
-    if (alive) {
+    if (m_Alive) {
       Debug.Log ("Player dies!");
-
+     
       // TODO: Show Game Over Scene
       // TODO: Reset The game Status
-    }
 
+      m_Alive = false;
+    }
   }
 }
