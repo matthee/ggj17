@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndlessShipController : MonoBehaviour {
 
-  public GameObject sectionPrefab;
-  public float sectionLength;
+[System.Serializable]
+public struct SectionDefinition {
+  public GameObject Prefab;
+  public float Length;
+}
+
+public class EndlessShipController : MonoBehaviour {
+  public List<SectionDefinition> sectionDefinitions;
+
+  [SerializeField]
+  public SectionDefinition startSectionDefinition;
 
   public GameObject player;
   public float generateAhead;
@@ -13,6 +21,7 @@ public class EndlessShipController : MonoBehaviour {
 
   private float generatedLength;
   private LinkedList<GameObject> sections = new LinkedList<GameObject> ();
+  private bool useStartSection = true;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +36,7 @@ public class EndlessShipController : MonoBehaviour {
     }
 
     sections = new LinkedList<GameObject> ();
+    useStartSection = true;
   }
 	
 	// Update is called once per frame
@@ -35,6 +45,16 @@ public class EndlessShipController : MonoBehaviour {
 
     int itemcount = 0;
     while (offx + generateAhead > generatedLength) {
+      
+      SectionDefinition def;
+      if (useStartSection) {
+        def = startSectionDefinition;
+        useStartSection = false;
+      } else {
+        def = sectionDefinitions [Random.Range (0, sectionDefinitions.Count)];
+      }
+
+      GameObject sectionPrefab = def.Prefab;
       GameObject section = Instantiate (sectionPrefab, transform);
 
       section.transform.position = new Vector3 (transform.position.x + generatedLength, transform.position.y, transform.position.z);
@@ -43,7 +63,7 @@ public class EndlessShipController : MonoBehaviour {
 
       sections.AddLast (section);
 
-      generatedLength += sectionLength; 
+      generatedLength += def.Length; 
 
       itemcount++;
       if (itemcount > 10) {

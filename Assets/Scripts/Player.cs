@@ -7,6 +7,10 @@ public class Player : MonoBehaviour {
    
   private bool m_Alive;
 
+  public bool alive {
+    get { return m_Alive; }
+  }
+
 	// Use this for initialization
 	void Start () {
     m_CollisionManager = GetComponent<CollisionManager> ();

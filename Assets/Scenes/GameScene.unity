@@ -155,7 +155,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 998876727}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -433,9 +433,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7549bf61c5a844fbafb647d20993b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionPrefab: {fileID: 1269928050855488, guid: 32655ed487ec3418d82b0465c848a73f,
-    type: 2}
-  sectionLength: 10
+  sectionDefinitions:
+  - Prefab: {fileID: 1269928050855488, guid: 32655ed487ec3418d82b0465c848a73f, type: 2}
+    Length: 10
+  - Prefab: {fileID: 1269928050855488, guid: f33729c7ee5ec45a5a4de28caab29cd1, type: 2}
+    Length: 10
+  - Prefab: {fileID: 1269928050855488, guid: 37a46db09eda74e3a82d2fd9e7294367, type: 2}
+    Length: 10
+  - Prefab: {fileID: 1269928050855488, guid: 0260d272379774812a34227aca115dea, type: 2}
+    Length: 10
+  - Prefab: {fileID: 1269928050855488, guid: 772ec9526f0c1480b9450bdc97bd4b00, type: 2}
+    Length: 10
+  - Prefab: {fileID: 1269928050855488, guid: 86c912eec2e644fa596343fec6739531, type: 2}
+    Length: 10
+  startSectionDefinition:
+    Prefab: {fileID: 1269928050855488, guid: 0260d272379774812a34227aca115dea, type: 2}
+    Length: 10
   player: {fileID: 590352370}
   generateAhead: 50
   generateBack: 20
@@ -664,13 +677,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1023033793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.603, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1776434514
 Prefab:
   m_ObjectHideFlags: 0
@@ -726,7 +739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.58
+      value: 0.016
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_LocalPosition.z
