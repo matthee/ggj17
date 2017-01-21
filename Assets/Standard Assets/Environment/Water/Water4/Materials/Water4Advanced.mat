@@ -256,22 +256,22 @@ Material:
       second: {r: 1, g: 1, b: 0, a: 0}
     - first:
         name: _GAmplitude
-      second: {r: 0.14, g: 5.26, b: 0, a: 0}
+      second: {r: 0, g: 2.3, b: 0, a: 0}
     - first:
         name: _GDirectionAB
-      second: {r: 1, g: 1, b: 0.45, a: 0}
+      second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _GDirectionCD
-      second: {r: 0.7033888, g: -0.6799999, b: 0.7175735, a: -0.2}
+      second: {r: 0, g: 0, b: 0, a: 0}
     - first:
         name: _GFrequency
-      second: {r: 0.5, g: 0.38, b: 0.59, a: 0.6}
+      second: {r: 0, g: 0.28, b: 0, a: 0}
     - first:
         name: _GSpeed
-      second: {r: -3, g: 2, b: 1, a: 2}
+      second: {r: 0, g: 1.98, b: 0, a: 0}
     - first:
         name: _GSteepness
-      second: {r: 7, g: 2, b: 6, a: 2}
+      second: {r: 0, g: 0, b: 0, a: 0}
     - first:
         name: _HorizonColor
       second: {r: 0.052907113, g: 0.24486735, b: 0.2835821, a: 1}
