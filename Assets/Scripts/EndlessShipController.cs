@@ -16,14 +16,22 @@ public class EndlessShipController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-    generatedLength = 0f;	
-    sections = new LinkedList<GameObject>();
+    Reset()
 	}
+
+  public void Reset () {
+    generatedLength = 0f; 
+
+    foreach (GameObject sec in sections) {
+      Destroy (sec);
+    }
+
+    sections = new LinkedList<GameObject> ();
+  }
 	
 	// Update is called once per frame
 	void Update () {
     float offx = player.transform.position.x;
-
 
     int itemcount = 0;
     while (offx + generateAhead > generatedLength) {
@@ -34,7 +42,6 @@ public class EndlessShipController : MonoBehaviour {
       section.transform.parent = transform;
 
       sections.AddLast (section);
-
 
       generatedLength += sectionLength; 
 
@@ -60,6 +67,5 @@ public class EndlessShipController : MonoBehaviour {
       }
     }
 
-   
 	}
 }
