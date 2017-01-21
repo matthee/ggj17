@@ -5,6 +5,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerControl : MonoBehaviour {
+  public bool m_AutoRun = true;
   private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
   private Transform m_Cam;                  // A reference to the main camera in the scenes transform
   private Vector3 m_CamForward;             // The current forward direction of the camera
@@ -48,12 +49,13 @@ public class PlayerControl : MonoBehaviour {
     float h = CrossPlatformInputManager.GetAxis("Horizontal");
     float v = CrossPlatformInputManager.GetAxis("Vertical");
 
-
-    if (v < 0) { 
-      v = 0;
-    } else if (v==0) {
-      v = 1;
-    }
+	if (m_AutoRun) {
+	  if (v < 0) { 
+		v = 0;
+	  } else if (v==0) {
+		v = 1;
+	  }
+	}
 
     bool crouch = Input.GetKey(KeyCode.C);
 
