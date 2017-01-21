@@ -51,7 +51,7 @@ public class PlayerControl : MonoBehaviour {
 
     if (v < 0) { 
       v = 0;
-    } else {
+    } else if (v==0) {
       v = 1;
     }
 
