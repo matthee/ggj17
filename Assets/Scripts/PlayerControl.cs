@@ -11,7 +11,6 @@ public class PlayerControl : MonoBehaviour {
   private Vector3 m_CamForward;             // The current forward direction of the camera
   private Vector3 m_Move;
   private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
-  private CollisionManager manager;
 
   private void Start()
   {
@@ -29,7 +28,6 @@ public class PlayerControl : MonoBehaviour {
 
     // get the third person character ( this should never be null due to require component )
     m_Character = GetComponent<ThirdPersonCharacter>();
-	manager = GetComponent<CollisionManager> ();
   }
 
 
@@ -83,22 +81,5 @@ public class PlayerControl : MonoBehaviour {
   }
 
   
-	void OnCollisionStay(Collision coll) {
-		// first, see if the player is touching anything else.
-		Collision[] collisions = manager.Collisions;
-
-		if (collisions.GetLength (0) == 0) return;
-
-		// cycle through the other collisions and detect what the normal is.
-		// if the difference between the normals is more than 90 degrees, the player has been crushed.
-		Vector3 new_normal = coll.contacts[0].normal;
-
-		foreach (Collision existing_coll in collisions) {
-			Vector3 existing_normal = existing_coll.contacts[0].normal;
-
-			float normal_angle = Vector3.Angle (new_normal, existing_normal);
-			if (normal_angle > 135)
-				Debug.Log ("DIEEE");
-		}
-	}
+	
 }
