@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.ThirdPerson;
+using UnityStandardAssets.Utility;
 
 public class Player : MonoBehaviour {
   private CollisionManager m_CollisionManager;
+  public GameController m_GameController;
    
   private bool m_Alive;
 
@@ -20,6 +23,11 @@ public class Player : MonoBehaviour {
   public void Reset () {
     m_Alive = true;
     GetComponent<Rigidbody> ().velocity = Vector3.zero;
+	GetComponent<PlayerControl> ().enabled = true;
+	GetComponent<Animator> ().enabled = true;
+	GetComponent<ThirdPersonCharacter> ().enabled = true;
+	GetComponent<Rigidbody> ().freezeRotation = true;
+	Camera.main.GetComponent<FollowTarget> ().enabled = true;
   }
 
   void OnCollisionStay(Collision coll) {
@@ -42,14 +50,28 @@ public class Player : MonoBehaviour {
     }
   }
 
-  private void Die () {
+	void OnCollisionEnter(Collision collision) {
+		
+		if (collision.transform.tag == "CanDestroy") {
+			Die ();
+		}
+	}
+
+  public void Die () {
     if (m_Alive) {
+	  GetComponent<PlayerControl> ().enabled = false;
+	  GetComponent<Animator> ().enabled = false;
+	  GetComponent<ThirdPersonCharacter> ().enabled = false;
+	  GetComponent<Rigidbody> ().freezeRotation = false;
+	  Camera.main.GetComponent<FollowTarget> ().enabled = false;
+	  
       Debug.Log ("Player dies!");
      
       // TODO: Show Game Over Scene
       // TODO: Reset The game Status
 
       m_Alive = false;
+	  m_GameController.Reset ();
     }
   }
 }

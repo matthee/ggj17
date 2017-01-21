@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Utility;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class GameController : MonoBehaviour {
 
@@ -22,6 +24,8 @@ public class GameController : MonoBehaviour {
 
   public void Reset () {
     Debug.Log ("Resetting Game");
+	
+
     MovePlayerToSpawnPoint ();
     ResetPlayer ();
     ResetEndlessShipGenerator ();
