@@ -18,7 +18,7 @@ public class SwayMotion : MonoBehaviour {
 		float t = Time.timeSinceLevelLoad;
 
 		transform.position = Vector3.Lerp(transform.position, new Vector3 (0, m_waveMagnitude * Mathf.Sin (m_frequency*(t)) + m_HeightOffset, 0), 0.5f);
-		transform.rotation = Quaternion.Euler (Mathf.Rad2Deg * Mathf.Atan(-Mathf.Cos (m_frequency*(t)) / 5f), 0,0);
+		transform.rotation = Quaternion.Euler (Mathf.Rad2Deg * Mathf.Atan(-Mathf.Cos (m_frequency*(t)) / 2f), 0,0);
 
 //		Ray ray = new Ray (transform.position + Vector3.up, Vector3.down);
 //		RaycastHit[] hits = Physics.RaycastAll (ray, 1000f);
