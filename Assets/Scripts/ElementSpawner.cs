@@ -56,7 +56,7 @@ public class ElementSpawner : MonoBehaviour {
           );
         }
           
-        element.GetComponent<Rigidbody> ().AddForce (force, ForceMode.Impulse);
+        element.GetComponent<Rigidbody> ().AddForce (- force, ForceMode.Impulse);
       }
     }
   }
