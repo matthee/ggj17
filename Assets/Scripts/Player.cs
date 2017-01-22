@@ -78,8 +78,7 @@ public class Player : MonoBehaviour {
       // TODO: Reset The game Status
 
       m_Alive = false;
-
-	    m_GameController.ResetIn (5f);
+	    m_GameController.MenuIn (3f);
     }
   }
 

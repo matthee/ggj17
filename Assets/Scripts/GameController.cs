@@ -14,7 +14,10 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-    Reset ();
+		MovePlayerToSpawnPoint ();
+		ResetPlayer ();
+		ResetEndlessShipGenerator ();
+//    Reset ();
 	}
 	
 	// Update is called once per frame
@@ -39,12 +42,24 @@ public class GameController : MonoBehaviour {
   public void Reset () {
     Debug.Log ("Resetting Game");
 	
-
-    MovePlayerToSpawnPoint ();
-    ResetPlayer ();
-    ResetEndlessShipGenerator ();
+	SceneManager.LoadScene ("GameScene");
+//    MovePlayerToSpawnPoint ();
+//    ResetPlayer ();
+//    ResetEndlessShipGenerator ();
   }
 
+  public void Menu () {
+	SceneManager.LoadScene ("MenuScene");
+  }
+
+  public void MenuIn (float delay) {
+    StartCoroutine (MenuAfterDelay (delay));  
+  }
+  
+  private IEnumerator MenuAfterDelay(float seconds) {
+    yield return new WaitForSeconds(seconds);
+    Menu();
+  }
 
   public void ResetIn(float delay) {
     StartCoroutine (ResetAfterDelay (delay));
