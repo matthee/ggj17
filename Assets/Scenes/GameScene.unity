@@ -451,6 +451,8 @@ MonoBehaviour:
     Length: 10.307
   - Prefab: {fileID: 1269928050855488, guid: f5389187bd16c469f9517d306ae57aae, type: 2}
     Length: 10.307
+  - Prefab: {fileID: 1269928050855488, guid: 7c603b802776d4ad6a0b92c158e9e5e3, type: 2}
+    Length: 20.614
   startSectionDefinition:
     Prefab: {fileID: 1269928050855488, guid: 0260d272379774812a34227aca115dea, type: 2}
     Length: 10
@@ -964,6 +966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494286545}
   - component: {fileID: 1494286544}
+  - component: {fileID: 1494286546}
   m_Layer: 0
   m_Name: Water4AdvancedReflectionSceneCamera
   m_TagString: Untagged
@@ -1011,75 +1014,21 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1494286543}
-  m_LocalRotation: {x: 0.071324825, y: 0.5046648, z: 0.0418878, w: -0.8593437}
-  m_LocalPosition: {x: 7.31667, y: -1.2548643, z: -3.255219}
+  m_LocalRotation: {x: 0.48472184, y: 0.10757483, z: 0.06021632, w: -0.86593676}
+  m_LocalPosition: {x: 7.859597, y: -5.9658895, z: -0.8630369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1533714757
-Prefab:
+--- !u!45 &1494286546
+Skybox:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4935600664422008, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4946532818619196, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.638
-      objectReference: {fileID: 0}
-    - target: {fileID: 4797400026741336, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3.304
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766935132722462, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.029
-      objectReference: {fileID: 0}
-    - target: {fileID: 4161161753431642, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3.949
-      objectReference: {fileID: 0}
-    - target: {fileID: 4280006441070426, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -4.615
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: cb841345c6295489dbc6758af8caceb1, type: 2}
-  m_IsPrefabParent: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494286543}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!1001 &1776434514
 Prefab:
   m_ObjectHideFlags: 0

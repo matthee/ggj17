@@ -6,10 +6,13 @@ public class ElementSpawner : MonoBehaviour {
   public GameObject m_Origin;
   public bool m_ApplyForce;
   public Vector3 m_Force;
+  public bool m_RandomizeForce = true;
+  public Vector3 m_RandomizationExtent;
 
   public bool m_ApplyRotation = true;
   public float m_SpawnCount;
 
+  public Vector3 m_ElementOffset;
   public GameObject m_Prefab;
 
   private List<GameObject> elements = new List<GameObject>();
@@ -17,11 +20,8 @@ public class ElementSpawner : MonoBehaviour {
 	void Start () {
     for (int i = 0; i < m_SpawnCount; i++) {
       GameObject element = Instantiate (m_Prefab);
-      element.transform.position = new Vector3(m_Origin.transform.position.x, m_Origin.transform.position.y + 100*i, m_Origin.transform.position.z);
 
-      if (m_ApplyRotation) {
-        element.transform.rotation = m_Origin.transform.rotation;
-      }
+
 
       element.transform.parent = transform;
       element.SetActive (false);
@@ -32,12 +32,38 @@ public class ElementSpawner : MonoBehaviour {
 
   public void Release () {
     Debug.Log ("Releasing Barrels");
-    foreach (GameObject element in elements) {
+
+    for (int i = 0; i < m_SpawnCount; i++) {
+      GameObject element = elements [i];
+
+      Vector3 pos = m_Origin.transform.position + m_ElementOffset * i;
+      element.transform.position = pos;
+
+      if (m_ApplyRotation) {
+        element.transform.rotation = m_Origin.transform.rotation * transform.rotation;
+      }
+
       element.SetActive (true);
 
       if (m_ApplyForce) {
-        element.GetComponent<Rigidbody> ().AddForce (m_Force, ForceMode.Impulse);
+        Vector3 force = m_Force;
+
+        if (m_RandomizeForce) {
+          force = new Vector3 (
+            RandomizeDimension(m_Force.x, m_RandomizationExtent.x),
+            RandomizeDimension(m_Force.y, m_RandomizationExtent.y),
+            RandomizeDimension(m_Force.z, m_RandomizationExtent.z)
+          );
+        }
+          
+        element.GetComponent<Rigidbody> ().AddForce (force, ForceMode.Impulse);
       }
     }
+  }
+
+  private float RandomizeDimension(float val, float extent) {
+    float rand = Random.Range (-extent, extent);
+
+    return val + rand;
   }
 }

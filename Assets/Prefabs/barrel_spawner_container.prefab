@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 4076575335038166}
   - component: {fileID: 65215884897005024}
   - component: {fileID: 114418135847356170}
+  - component: {fileID: 114487584260055384}
   m_Layer: 0
   m_Name: barrel_spawner_container
   m_TagString: Untagged
@@ -152,8 +153,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1634625949519166}
-  m_LocalRotation: {x: -0, y: -0, z: 0.008859581, w: 0.9999608}
-  m_LocalPosition: {x: -4.662949, y: 7.3693414, z: 0.25}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 11.11, y: 1.3579259, z: 1.11}
   m_LocalScale: {x: 0.016083812, y: 0.016083812, z: 0.016083812}
   m_Children:
   - {fileID: 4093283208275666}
@@ -162,7 +163,7 @@ Transform:
   - {fileID: 4138172546098878}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.0150001}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4093283208275666
 Transform:
   m_ObjectHideFlags: 1
@@ -182,13 +183,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286296437005908}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 331, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 298.80267, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4076575335038166}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!4 &4279729053144326
 Transform:
   m_ObjectHideFlags: 1
@@ -456,10 +457,10 @@ HingeJoint:
   m_Anchor: {x: 218.3, y: 73.31, z: -89.2}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 4.59993, y: 73.310005, z: -1.1999207}
-  m_UseSpring: 0
+  m_ConnectedAnchor: {x: 4.599991, y: 73.309975, z: -1.1999512}
+  m_UseSpring: 1
   m_Spring:
-    spring: 0
+    spring: 2000
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -488,10 +489,10 @@ HingeJoint:
   m_Anchor: {x: 215.54, y: 87.3, z: 91.7}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.8404632, y: 83.91983, z: 0.80020034}
-  m_UseSpring: 0
+  m_ConnectedAnchor: {x: 1.8405242, y: 83.91985, z: 0.80021566}
+  m_UseSpring: 1
   m_Spring:
-    spring: 0
+    spring: 2000
     damper: 0
     targetPosition: 0
   m_UseMotor: 0
@@ -535,7 +536,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Origin: {fileID: 1286296437005908}
   m_ApplyForce: 1
-  m_Force: {x: 100, y: 0, z: 0}
+  m_Force: {x: 120, y: 30, z: 0}
+  m_RandomizeForce: 1
+  m_RandomizationExtent: {x: 30, y: 30, z: 0}
   m_ApplyRotation: 1
-  m_SpawnRate: 1
+  m_SpawnCount: 5
+  m_ElementOffset: {x: -0.6, y: 0.4, z: 0}
   m_Prefab: {fileID: 1315108923217348, guid: 8da7e90297361468ea4c95aa5d866eaa, type: 2}
+--- !u!114 &114487584260055384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1634625949519166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77889a7505902495da711ff0147229c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LeftDoorJoint: {fileID: 59251245054798470}
+  m_RightDoorJoint: {fileID: 59712147290678744}
+  m_BarrelDelay: 0.2

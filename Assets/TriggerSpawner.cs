@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TriggerSpawner : MonoBehaviour {
-  public ElementSpawner spawner;
+  public BarrelContainerSpawner spawner;
 
   public void OnTriggerEnter(Collider other) {
     Debug.Log("Collision detected");
