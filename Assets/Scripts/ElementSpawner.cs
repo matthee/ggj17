@@ -30,7 +30,7 @@ public class ElementSpawner : MonoBehaviour {
     }
   }
 
-  public void Release () {
+  public IEnumerator Release () {
     Debug.Log ("Releasing Barrels");
 
     for (int i = 0; i < m_SpawnCount; i++) {
@@ -58,6 +58,8 @@ public class ElementSpawner : MonoBehaviour {
           
         element.GetComponent<Rigidbody> ().AddForce (- force, ForceMode.Impulse);
       }
+
+	  yield return new WaitForSeconds (0.3f);
     }
   }
 

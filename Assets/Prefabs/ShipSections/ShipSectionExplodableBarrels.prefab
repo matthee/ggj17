@@ -330,7 +330,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789187815022758}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 298.8027, y: 0, z: 0}
+  m_LocalPosition: {x: 298.8027, y: -36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4726998628435440}
@@ -1040,10 +1040,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Origin: {fileID: 1789187815022758}
   m_ApplyForce: 1
-  m_Force: {x: 120, y: 30, z: 0}
+  m_Force: {x: 160, y: 10, z: 0}
   m_RandomizeForce: 1
   m_RandomizationExtent: {x: 30, y: 30, z: 0}
   m_ApplyRotation: 1
   m_SpawnCount: 5
-  m_ElementOffset: {x: -0.6, y: 0.4, z: 0}
+  m_ElementOffset: {x: 0, y: 0, z: 0}
   m_Prefab: {fileID: 1315108923217348, guid: 8da7e90297361468ea4c95aa5d866eaa, type: 2}

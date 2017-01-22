@@ -43,6 +43,6 @@ public class BarrelContainerSpawner : MonoBehaviour {
   }
 
   void ReleaseBarrels() {
-    m_ElementSpawner.Release ();
+		StartCoroutine(m_ElementSpawner.Release ());
   }
 }
