@@ -60,8 +60,7 @@ public class GameController : MonoBehaviour {
     yield return new WaitForSeconds(seconds);
     Reset ();
   }
-
-
+    
   private void MovePlayerToSpawnPoint() {
     GameObject spawn = m_SpawnPoints[Random.Range(0, m_SpawnPoints.Count)];
     
