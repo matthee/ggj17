@@ -63,7 +63,7 @@ public class Player : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		
-		if (collision.transform.tag == "CanDestroy") {
+		if (collision.transform.tag == "Water") {
 			Die ();
       Ragdoll ();
 		}
