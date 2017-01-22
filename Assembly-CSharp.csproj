@@ -68,6 +68,7 @@
      <Compile Include="Assets\TriggerSpawner.cs" />
      <None Include="Assets\Explosion System\Shader\Exposion.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\Fonts\typesetit_playball\OFL.txt" />
      <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />

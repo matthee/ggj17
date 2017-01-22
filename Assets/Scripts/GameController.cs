@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Utility;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class GameController : MonoBehaviour {
 
@@ -21,6 +23,18 @@ public class GameController : MonoBehaviour {
       Reset ();
     }
 	}
+
+  public void StartGame() {
+		SceneManager.LoadScene ("GameScene");
+  }
+
+  public void ExitGame() {
+#if UNITY_EDITOR
+		EditorApplication.ExecuteMenuItem("Edit/Play");
+#else
+		Application.Quit ();
+#endif
+  }
 
   public void Reset () {
     Debug.Log ("Resetting Game");
