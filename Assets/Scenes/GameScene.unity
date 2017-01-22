@@ -245,7 +245,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &310069242
 GameObject:
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 310069245}
   m_Layer: 0
   m_Name: __SCRIPT__
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -379,6 +379,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 386202096}
+--- !u!1001 &488238823
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1023033794}
+    m_Modifications:
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.6896312
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.72416073
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fb42618bd52c34f5aab89002116b101d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &527159934
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: b544816461f324e56a39767fdeb5b114, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 114250017250268460, guid: b544816461f324e56a39767fdeb5b114,
         type: 2}
@@ -894,9 +936,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 6.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1687202338}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1372531660
 GameObject:
@@ -1018,8 +1061,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1494286543}
-  m_LocalRotation: {x: -0.10079557, y: 0.16044725, z: 0.016469093, w: 0.98174626}
-  m_LocalPosition: {x: -85.44612, y: -120.745125, z: -552.19946}
+  m_LocalRotation: {x: -0.4063949, y: 0.30873156, z: 0.14810798, w: 0.84710807}
+  m_LocalPosition: {x: -6.724424, y: -13.843019, z: -8.053926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1033,6 +1076,11 @@ Skybox:
   m_GameObject: {fileID: 1494286543}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 0}
+--- !u!4 &1687202338 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4709892483728342, guid: fb42618bd52c34f5aab89002116b101d,
+    type: 2}
+  m_PrefabInternal: {fileID: 488238823}
 --- !u!1001 &1776434514
 Prefab:
   m_ObjectHideFlags: 0
@@ -1070,7 +1118,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470886, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: RainIntensity

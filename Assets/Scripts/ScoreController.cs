@@ -9,19 +9,28 @@ public class ScoreController : MonoBehaviour {
 
   private Text scoreTextFieldText;
 
+  private int m_CollectableScore;
+
   [HideInInspector]
   public int score {
     get {
-      return (int) player.transform.position.x;
+      return (int) player.transform.position.x + m_CollectableScore;
     }
   }
+
+
 	// Use this for initialization
 	void Start () {
     scoreTextFieldText = scoreTextField.GetComponent<Text> ();
+    m_CollectableScore = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
     scoreTextFieldText.text = "Score: " + score;
 	}
+
+  public void AddScore(int score) {
+    m_CollectableScore += score;
+  }
 }

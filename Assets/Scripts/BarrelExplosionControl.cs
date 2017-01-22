@@ -23,7 +23,6 @@ public class BarrelExplosionControl : MonoBehaviour {
 		}
 
 		Vector3 diff = collision.rigidbody.velocity - rigid_body.velocity;
-		Debug.Log (diff.sqrMagnitude);
 		if (collision.transform.tag == "Player" || diff.sqrMagnitude > 2f) {
 			gameObject.GetComponentInChildren<MeshRenderer>().enabled = false;
 			gameObject.GetComponent<MeshCollider> ().enabled = false;
