@@ -45,6 +45,17 @@ public class GameController : MonoBehaviour {
     ResetEndlessShipGenerator ();
   }
 
+
+  public void ResetIn(float delay) {
+    StartCoroutine (ResetAfterDelay (delay));
+  }
+
+  private IEnumerator ResetAfterDelay(float seconds) {
+    yield return new WaitForSeconds(seconds);
+    Reset ();
+  }
+
+
   private void MovePlayerToSpawnPoint() {
     GameObject spawn = m_SpawnPoints[Random.Range(0, m_SpawnPoints.Count)];
     

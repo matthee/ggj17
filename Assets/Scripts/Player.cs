@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
   public GameController m_GameController;
    
   private bool m_Alive;
-
+  private GameObject m_SnapTo;
   public bool alive {
     get { return m_Alive; }
   }
@@ -19,6 +19,12 @@ public class Player : MonoBehaviour {
     m_CollisionManager = GetComponent<CollisionManager> ();
     Reset ();
 	}
+
+  void Update () {
+    if (m_SnapTo != null) {
+      transform.position = Vector3.Lerp(transform.position, m_SnapTo.transform.position + Vector3.up * 0.2f, 0.1f);
+    }
+  }
 
   public void Reset () {
     m_Alive = true;
@@ -54,16 +60,17 @@ public class Player : MonoBehaviour {
 		
 		if (collision.transform.tag == "CanDestroy") {
 			Die ();
+      Ragdoll ();
 		}
+    if (collision.transform.tag == "Trap") {
+      Die ();
+      SnapTo (collision.gameObject);
+    }
 	}
 
   public void Die () {
     if (m_Alive) {
-	  GetComponent<PlayerControl> ().enabled = false;
-	  GetComponent<Animator> ().enabled = false;
-	  GetComponent<ThirdPersonCharacter> ().enabled = false;
-	  GetComponent<Rigidbody> ().freezeRotation = false;
-	  Camera.main.GetComponent<FollowTarget> ().enabled = false;
+      GetComponent<PlayerControl> ().Stop ();
 	  
       Debug.Log ("Player dies!");
      
@@ -71,7 +78,29 @@ public class Player : MonoBehaviour {
       // TODO: Reset The game Status
 
       m_Alive = false;
-	  m_GameController.Reset ();
+
+	    m_GameController.ResetIn (5f);
     }
+  }
+
+  public void Explode() {
+    Die ();
+    Ragdoll ();
+  }
+
+  public void Ragdoll() {
+    GetComponent<PlayerControl> ().enabled = false;
+    //GetComponent<Animator> ().enabled = false;
+    //GetComponent<ThirdPersonCharacter> ().enabled = false;
+    GetComponent<Rigidbody> ().freezeRotation = false;
+    Camera.main.GetComponent<FollowTarget> ().enabled = false;
+
+  }
+
+  public void SnapTo(GameObject go) {
+    m_SnapTo = go;
+    transform.parent = go.transform;
+    GetComponent<PlayerControl> ().Stop ();
+    GetComponent<Rigidbody> ().isKinematic = true;
   }
 }

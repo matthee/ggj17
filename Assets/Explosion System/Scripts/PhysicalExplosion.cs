@@ -13,7 +13,7 @@ public class PhysicalExplosion : MonoBehaviour
             if(hitColliders[i].CompareTag("Player"))// if tag CanBeRigidbody
             {
 				Player control = hitColliders [i].GetComponent<Player> ();
-				control.Die ();
+				control.Explode ();
                 if(!hitColliders[i].GetComponent<Rigidbody>())
                 {
                 hitColliders[i].gameObject.AddComponent<Rigidbody>();
