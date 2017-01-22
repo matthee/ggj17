@@ -8,6 +8,12 @@ using UnityEditor;
 #endif
 
 public class MenuController : MonoBehaviour {
+  public void Update () {
+    if (Input.GetKeyDown (KeyCode.Space)) {
+      StartGame ();
+    }
+  }
+
   public void StartGame() {
     SceneManager.LoadScene ("GameScene");
   }
