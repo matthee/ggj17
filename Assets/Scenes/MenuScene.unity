@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 310069244}
-  - component: {fileID: 310069245}
+  - component: {fileID: 310069243}
   m_Layer: 0
   m_Name: __SCRIPT__
   m_TagString: Untagged
@@ -347,6 +347,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &310069243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310069242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab15bd46c21384bbbbf024d003dc8fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &310069244
 Transform:
   m_ObjectHideFlags: 0
@@ -360,21 +371,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &310069245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 310069242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd9795ce3ece04051b1b5d50f6d7b93e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EndlessShipController: {fileID: 725229777}
-  m_Player: {fileID: 0}
-  m_SpawnPoints:
-  - {fileID: 0}
 --- !u!1001 &330312065
 Prefab:
   m_ObjectHideFlags: 0
@@ -1271,7 +1267,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310069245}
+      - m_Target: {fileID: 310069243}
         m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
@@ -1546,8 +1542,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1494286543}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 335, y: -222.86, z: -1348.9983}
+  m_LocalRotation: {x: -0.12290034, y: 0.65593755, z: 0.109430745, w: 0.7366589}
+  m_LocalPosition: {x: -20.66914, y: -10.001876, z: -2.404223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1785,7 +1781,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 310069245}
+      - m_Target: {fileID: 310069243}
         m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
