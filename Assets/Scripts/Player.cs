@@ -48,9 +48,11 @@ public class Player : MonoBehaviour {
 
     foreach (Collision existing_coll in collisions) {
       Vector3 existing_normal = existing_coll.contacts[0].normal;
+	
+	  Vector3 diff = coll.rigidbody.velocity - existing_coll.rigidbody.velocity;
 
       float normal_angle = Vector3.Angle (new_normal, existing_normal);
-      if (normal_angle > 135) {
+	  if (normal_angle > 135 && diff.sqrMagnitude > 2) {
         Die ();
       }
     }
